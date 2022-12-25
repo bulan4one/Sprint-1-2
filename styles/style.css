@@ -1,3 +1,5 @@
+/* @import url(/blocks/header/header.css); */
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -6,7 +8,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .header {
@@ -18,23 +20,20 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  
-    /* выше установили ограничения для секции */
 }
 
-.header__logo {   
+.logo {
   height: 32px;
   width: 228px;
   z-index: 3;
 }
 
 .logo_place_header {
-  background-image: url('../images/logo_place_header.svg');
+  background-image: url("../images/logo_place_header.svg");
   position: absolute;
   top: 30px;
   left: 64px;
-  } 
-  
+}
 
 .header__title {
   width: 730px;
@@ -63,15 +62,13 @@
 }
 
 .header__main-illustration {
- position: absolute;
- right: 0;
- bottom: 0;
- z-index: 1;
- height: 608px;
- width: 756px;
-
- }
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 608px;
+  width: 756px;
+}
 
 .header__square-pic {
   height: 568px;
@@ -81,7 +78,7 @@
   right: 0;
   z-index: 0;
   top: 64px;
-  }
+}
 
 .two-columns {
   display: flex;
@@ -89,18 +86,19 @@
   margin-top: 100px;
   margin-bottom: 100px;
   margin-left: auto;
-  margin-right: auto;  
-  justify-content: space-between; 
-  min-height: 30px; 
+  margin-right: auto;
+  justify-content: space-between;
+  min-height: 30px;
   font-size: 24px;
 }
 
 .two-columns__span-accent {
-  font-weight: bold;
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 24px;
-   }
+  line-height: 34px;
+  font-weight: 600;
+}
 
 .two-columns__brief {
   width: 175px;
@@ -124,6 +122,9 @@
 .two-columns__paragraph {
   margin-top: 15px;
   margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
 }
 
 .two-columns__paragraph:first-child {
@@ -165,6 +166,7 @@
   line-height: 1.2;
   font-weight: normal;
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .table__text:last-of-type {
@@ -176,7 +178,7 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
-  text-align: center;  
+  text-align: center;
   margin: 0;
 }
 
@@ -204,47 +206,55 @@
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: left 0% bottom 0%;
-  background-size: 867px 637px;  
+  background-size: 867px 637px;
   position: relative;
-  }
+}
 
-  .feynman__title {
-    font-size: 120px;
-    font-weight: 600;
-    line-height: 1.15;    
-    width: 648px;
-    text-align: center;
-    margin: 100px auto 0;
-    padding-top: 100px;
-  }
+.feynman__title {
+  font-size: 120px;
+  font-weight: 600;
+  line-height: 1.15;
+  width: 648px;
+  text-align: center;
+  margin: 100px auto 0;
+  padding-top: 100px;
+}
 
-  .feynman__subtitle {
-    font-size: 36px;
-    line-height: 51px;
-    font-weight: normal;
-    margin: 70px auto 0;
-    text-align: center;    
-  }
+.feynman__subtitle {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: normal;
+  margin: 70px auto 0;
+  text-align: center;
+}
 
 .feynman__link {
-    position: absolute;
-    right: 48px;
-    top: 50%;
-    font-size: 36px;
-    line-height: 51px;
-    font-weight: normal;
-    text-decoration: none;
-    color: #2f80ed;
-  }
-/* и элемента с модификатором вида ключ-значение */
-.kaufman {  
-  background-color:  #1f1f1f;
-  overflow: hidden;
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.kaufman {
+  background-color: #1f1f1f;
   position: relative;
+  overflow: hidden;
+}
+
+.kaufman__triangle {
+  height: 877px;
   background-image: url(/images/kaufman-triangle.svg);
+  position: absolute;
   background-repeat: no-repeat;
-  background-size: 877px, 877px, contain;
-  background-position: top 0 right -210px;  
+  right: -210px;
+  width: 877px;
+  top: 0;
+  z-index: 0;
+  background-size: cover;
 }
 
 .table__cell_theme_dark {
@@ -253,26 +263,24 @@
   margin-right: 0;
   margin-top: 80px;
   z-index: 2;
-  
-  }
-
+}
 
 .section-title_theme_dark {
   color: white;
   margin: 90px auto 0;
   text-align: center;
-  width: 60%;  
+  width: 60%;
   z-index: 1;
   position: relative;
-  }
+}
 
 .section-subtitle_theme_dark {
-width: 60%;
-text-align: center;
-margin: 20px auto 0;
-color: white;
-z-index: 1;
-position: relative;
+  width: 60%;
+  text-align: center;
+  margin: 20px auto 0;
+  color: white;
+  z-index: 1;
+  position: relative;
 }
 
 .table_theme_dark {
@@ -280,13 +288,14 @@ position: relative;
 }
 
 .footer {
-  background-color:  #1f1f1f;
-  min-height: 350px; 
-  display: flex;      
+  background-color: #1f1f1f;
+  min-height: 350px;
+  display: flex;
+  box-sizing: border-box;
 }
 
-.footer__column_content_copyright { 
-  display: flex;  
+.footer__column_content_copyright {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
@@ -294,32 +303,32 @@ position: relative;
 
 .footer__columns {
   display: flex;
-  width: 90%;  
-  justify-content: space-between;   
-  margin: 0 auto ;
-  padding-top:  60px;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 60px;
   padding-bottom: 40px;
-  }
+}
 
-.logo_place_footer {    
-    height: 32px;
-    width: 228px;
-  }
+.logo_place_footer {
+  height: 32px;
+  width: 228px;
+}
 
- .footer__author {
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: normal;
-    color: #ffffff;
-    margin: 18px 0;
-    }
+.footer__author {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  color: #ffffff;
+  margin: 18px 0;
+}
 
 .footer__column-heading {
   margin: 0 auto 20px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 600;
-  color: white;  
+  color: white;
 }
 
 .footer__column-link {
@@ -333,20 +342,13 @@ position: relative;
 
 .footer__column-links {
   color: white;
-  list-style: none;  
+  list-style: none;
   padding: 0;
   margin-top: 0;
   margin-bottom: 16px;
-  
 }
 
 .footer__social-icon {
   height: 16px;
   width: 16px;
 }
-
-
-
-
-
-
